@@ -20,7 +20,6 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/unicrimp', [App\Http\Controllers\UnicrimpController::class, 'index']); //dashboard route
 Route::get('/{company?}', [App\Http\Controllers\MarketingController::class, 'index']); //dashboard route
 
-
 //Route::get('/{ovia}', function () {
 //    return view('ovia');
 //});
@@ -28,7 +27,7 @@ Route::get('/{company?}', [App\Http\Controllers\MarketingController::class, 'ind
 //    return view('unicrimp');
 //});
 
-Route::post('/scolmore', [App\Http\Controllers\MarketingController::class, 'store']);
+Route::post('/{company}', [App\Http\Controllers\MarketingController::class, 'store']);
 
 
 Route::delete('/{user}', [App\Http\Controllers\MarketingController::class, 'destroy']);

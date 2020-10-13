@@ -19,9 +19,6 @@ class MarketingController extends Controller
         return view('welcome', compact('company', 'users'));
 
 
-
-
-
 //        if($company == 'scolmore') {
 //            return view('welcome', compact('users'));
 //        } elseif ($company == 'ovia') {
@@ -44,7 +41,7 @@ class MarketingController extends Controller
 //        return view('welcome');
 //    }
 
-    public function store()
+    public function store($company)
     {
         $users = new MarketingUser();
 
@@ -64,7 +61,7 @@ class MarketingController extends Controller
 //        dd(session()->all());
 //        return redirect('/');
 
-        return ['message', '/'];
+        return ['message' => '/' . $company];
 
     }
 
@@ -87,6 +84,5 @@ class MarketingController extends Controller
 
         return redirect()->back();          //returns to current company page.
     }
-
 
 }

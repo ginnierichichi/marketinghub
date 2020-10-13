@@ -466,12 +466,12 @@
             </div>
         </div>
 
-    <new-user-modal></new-user-modal>
-    <button
-        class="button is-outlined border bg-white hover:bg-blue-200 hover:border-blue-500 rounded-lg py-2 px-4 shadow-md"
-        @click.prevent="$modal.show('create-user')">New User
-    </button>
+    <new-user-modal company="{{ $company }}"></new-user-modal>
 
+{{--        <button--}}
+{{--            class= "button is-outlined border bg-white hover:bg-blue-200 hover:border-blue-500 rounded-lg py-2 px-4 shadow-md"--}}
+{{--            @click.prevent="$modal.show('create-user')">New User--}}
+{{--        </button>--}}
 
 {{--        <div role="alert">--}}
 {{--            <div class="bg-green-500 text-white font-bold rounded-t px-4 py-2">--}}
@@ -494,8 +494,9 @@
            @include('popup')
         @endif
 
+        @if (Session::has('delete'))
         @include('delete_popup')
-
+        @endif
 
 {{--        @if (session('status'))--}}
 {{--            <div class="border border-red-500">--}}

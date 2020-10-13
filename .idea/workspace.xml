@@ -17,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -183,7 +183,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602062058995</updated>
       <workItem from="1602062060004" duration="25333000" />
-      <workItem from="1602144849748" duration="76201000" />
+      <workItem from="1602144849748" duration="91274000" />
     </task>
     <servers />
   </component>
@@ -230,12 +230,12 @@
     </state>
     <state x="3388" y="313" width="751" height="969" key="find.popup/0.23.2560.1337/2560.-72.2560.1417/-1680.413.1680.947@2560.-72.2560.1417" timestamp="1602172308628" />
     <state x="3388" y="540" width="751" height="646" key="find.popup/2560.155.2560.1417/-1680.198.1680.1027/0.23.2560.1337@2560.155.2560.1417" timestamp="1602072263038" />
-    <state x="3429" y="354" width="1277" height="1033" key="search.everywhere.popup" timestamp="1602517309234">
+    <state x="3429" y="354" width="1277" height="1033" key="search.everywhere.popup" timestamp="1602579062568">
       <screen x="2560" y="23" width="2560" height="1417" />
     </state>
     <state x="570" y="263" width="838" height="748" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1602265999976" />
     <state x="3428" y="259" width="838" height="1032" key="search.everywhere.popup/0.23.2560.1337/2560.-72.2560.1417/-1680.413.1680.947@2560.-72.2560.1417" timestamp="1602172406082" />
-    <state x="3429" y="354" width="1277" height="1033" key="search.everywhere.popup/2560.23.2560.1417/-1680.508.1680.1027/0.23.2560.1337@2560.23.2560.1417" timestamp="1602517309234" />
+    <state x="3429" y="354" width="1277" height="1033" key="search.everywhere.popup/2560.23.2560.1417/-1680.508.1680.1027/0.23.2560.1337@2560.23.2560.1417" timestamp="1602579062568" />
     <state x="3428" y="354" width="838" height="1032" key="search.everywhere.popup/2560.23.2560.1417/-1680.508.1680.947/0.23.2560.1337@2560.23.2560.1417" timestamp="1602259250475" />
     <state x="3429" y="354" width="1277" height="1033" key="search.everywhere.popup/2560.23.2560.1417/-1680.508.1680.947/0.23.2560.1417@2560.23.2560.1417" timestamp="1602501146919" />
   </component>

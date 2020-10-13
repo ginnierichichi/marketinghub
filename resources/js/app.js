@@ -15,6 +15,7 @@ window.Vue = require('vue');
 
 Vue.component('new-user-modal', require('./components/NewUserModal.vue').default);
 Vue.component('dropdown', require('./components/Dropdown.vue').default);
+// Vue.component('delete-modal', require('./components/Delete.vue').default);
 // Vue.component('vue-dropdown', require('./components/VueDropdown').default);
 // Vue.component('vue-dropdown', require('./components/App').default);
 
