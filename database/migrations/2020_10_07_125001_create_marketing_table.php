@@ -15,7 +15,7 @@ class CreateMarketingTable extends Migration
     {
         Schema::create('marketing_users', function (Blueprint $table) {
             $table->id();
-            $table->string('username')->unique();
+            $table->string('username');
             $table->string('password');
             $table->softDeletes();
             $table->timestamps();

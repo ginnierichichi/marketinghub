@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Session;
 use Illuminate\Http\Request;
 use App\Models\MarketingUser;
 
@@ -9,9 +10,17 @@ class MarketingController extends Controller
 {
     public function index($company = 'scolmore')
     {
-        $users = MarketingUser::all();
+//        $users = MarketingUser::all();
+
+        $users = MarketingUser::latest()->get();
+
+//        Session::flash('status', 'Success! User Created.');
 
         return view('welcome', compact('company', 'users'));
+
+
+
+
 
 //        if($company == 'scolmore') {
 //            return view('welcome', compact('users'));
@@ -30,17 +39,17 @@ class MarketingController extends Controller
 //        return view('marketing.show', compact('username'));
 //    }
 
-    public function create()
-    {
-        return view('welcome');
-    }
+//    public function create()
+//    {
+//        return view('welcome');
+//    }
 
     public function store()
     {
         $users = new MarketingUser();
 
         request()->validate([
-            'username' => 'required',
+            'username' => 'required|unique:marketing_users',
             'password' => 'required'
         ]);
 
@@ -50,7 +59,12 @@ class MarketingController extends Controller
 
         $users->save();
 
-        return redirect('/');
+        Session::flash('status', 'Success! User Created.');
+
+//        dd(session()->all());
+//        return redirect('/');
+
+        return ['message', '/'];
 
     }
 
@@ -68,6 +82,9 @@ class MarketingController extends Controller
     {
 
         $user->delete();
+
+        Session::flash('delete', 'User deleted.');
+
         return redirect()->back();          //returns to current company page.
     }
 

@@ -30,6 +30,7 @@ Route::get('/{company?}', [App\Http\Controllers\MarketingController::class, 'ind
 
 Route::post('/scolmore', [App\Http\Controllers\MarketingController::class, 'store']);
 
+
 Route::delete('/{user}', [App\Http\Controllers\MarketingController::class, 'destroy']);
 
 

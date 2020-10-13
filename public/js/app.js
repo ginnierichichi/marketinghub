@@ -2000,6 +2000,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2007,15 +2012,17 @@ __webpack_require__.r(__webpack_exports__);
         username: '',
         password: ''
       },
-      errors: {}
+      errors: {},
+      open: false
     };
   },
   methods: {
     submit: function submit() {
       var _this = this;
 
+      this.errors = {};
       axios.post('/scolmore', this.form).then(function (response) {
-        location.reload();
+        location = response.data.message;
       })["catch"](function (error) {
         _this.errors = error.response.data.errors;
       });
@@ -46039,7 +46046,7 @@ var render = function() {
     "modal",
     {
       staticClass: "rounded-lg p-10",
-      attrs: { name: "create-user", width: 400, height: 350 }
+      attrs: { name: "create-user", width: 400, height: 375 }
     },
     [
       _c("h1", { staticClass: "font-bold mt-10 text-center text-2xl" }, [
@@ -46076,7 +46083,7 @@ var render = function() {
                   expression: "form.username"
                 }
               ],
-              staticClass: "border  p-2 text-sm block rounded w-full",
+              staticClass: "border p-2 text-sm block rounded w-full",
               class: _vm.errors.username,
               attrs: { type: "text", id: "username" },
               domProps: { value: _vm.form.username },
@@ -46160,7 +46167,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("Cancel Button")]
+              [_vm._v("Cancel")]
             )
           ])
         ]

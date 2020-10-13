@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="bg-gray-200">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -472,6 +472,47 @@
         @click.prevent="$modal.show('create-user')">New User
     </button>
 
+
+{{--        <div role="alert">--}}
+{{--            <div class="bg-green-500 text-white font-bold rounded-t px-4 py-2">--}}
+{{--                Success!--}}
+{{--            </div>--}}
+{{--            <div class="border border-t-0 border-green-400 rounded-b bg-green-100 px-4 py-3 text-green-700">--}}
+{{--                <p>User Created.</p>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+
+
+{{--        @if (session('status'))--}}
+{{--           --}}
+{{--        @endif--}}
+
+{{--            @include('popup')--}}
+
+
+        @if (Session::has('status'))
+           @include('popup')
+        @endif
+
+        @include('delete_popup')
+
+
+{{--        @if (session('status'))--}}
+{{--            <div class="border border-red-500">--}}
+{{--                {{ session('status') }}--}}
+{{--            </div>--}}
+{{--        @endif--}}
+
+
+
+
+
+
+{{--        @if (session()->has('success'))--}}
+{{--            <div class="alert-success" id="popup_notification">--}}
+{{--                <strong>{!! trans('main.message') !!}</strong>{{ session('success') }}--}}
+{{--            </div>--}}
+{{--        @endif--}}
 
     @include('users_table')
     </body>
